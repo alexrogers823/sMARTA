@@ -1,0 +1,1 @@
+let data = Papa.parse(csv);
