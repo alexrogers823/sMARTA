@@ -212,14 +212,22 @@ getCurrentTime();
 // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
 function addToDropdown(json) {
     // const jsonArray = [...json];
-    const select = document.querySelector('[data-stations]');
+    const selectFrom = document.querySelector('[data-stations-from]');
+    const selectTo = document.querySelector('[data-stations-to]');
     Object.keys(json).sort().forEach(key => {
-        const stationName = document.createElement('option');
-        stationName.textContent = key;
-        stationName.setAttribute('value', key);
-        select.appendChild(stationName);
+        selectFrom.appendChild(createStation(key));
+        selectTo.appendChild(createStation(key));
     })
+}
 
+function createStation(key) {
+    const stationName = document.createElement('option');
+    stationName.textContent = key;
+    stationName.setAttribute('value', key);
+    return stationName;
+}
+
+function constraintMessage() {
 
 }
 
