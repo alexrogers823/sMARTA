@@ -3,7 +3,7 @@ function getCurrentTime() {
     const now = new Date();
     const minutes = now.getMinutes();
     const hours = now.getHours();
-
+    return now;
 }
 
 getCurrentTime();
