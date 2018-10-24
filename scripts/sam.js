@@ -215,12 +215,16 @@ function addToDropdown(json) {
     const selectFrom = document.querySelector('[data-stations-from]');
     const selectTo = document.querySelector('[data-stations-to]');
     Object.keys(json).sort().forEach(key => {
-        const stationName = document.createElement('option');
-        stationName.textContent = key;
-        stationName.setAttribute('value', key);
-        selectFrom.appendChild(stationName);
-        selectTo.appendChild(stationName);
+        selectFrom.appendChild(createStation(key));
+        selectTo.appendChild(createStation(key));
     })
+}
+
+function createStation(key) {
+    const stationName = document.createElement('option');
+    stationName.textContent = key;
+    stationName.setAttribute('value', key);
+    return stationName;
 }
 
 function constraintMessage() {
