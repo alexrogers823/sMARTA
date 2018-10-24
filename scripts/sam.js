@@ -220,6 +220,7 @@ function addToDropdown(json) {
     })
 }
 
+// Helper function that externally creates new <option> elements containing the station names
 function createStation(key) {
     const stationName = document.createElement('option');
     stationName.textContent = key;
