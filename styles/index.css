@@ -5,10 +5,7 @@ html {
     box-sizing: inherit;
   }
 
-h1 {
+.header {
   text-align: center;
-}
-
-h3 {
-  text-align: center;
+  color: blue;
 }
