@@ -1,7 +1,7 @@
 const ATLCrimeData = {};
 const crimeInfo = CrimeData.data;
 
-for (let i = 0; i < crimeInfo.length; i++) {
+for (let i = 1; i < crimeInfo.length; i++) {
     ExtractNeighborhood(crimeInfo[i][5]);
     const month = ExtractMonth(crimeInfo[i][2]);
     addCrimes(crimeInfo[i][5], month, i);
@@ -24,7 +24,7 @@ function ExtractNeighborhood(neighborhood) {
 // Creates Months 
 function createMonths() {
     const monthObj = {
-        "Types of Crimes ": []
+        "Types of Crimes": []
     }
     for (let i = 0; i < 12; i++) {
         monthObj[`${i}`] = 0;
