@@ -14,7 +14,10 @@
         <h1>sMARTA</h1>
         <h3>MARTA, smarter.</h3>
     </div>
-    <div class="formDiv">
+    <!-- Establishing our overarching div for the entire input form -->
+    <!-- This div will be overwritten with the output information once the user clicks 'submit' -->
+        <!-- addEventListener('click', submit) will trigger this overwrite -->
+    <div class="formDiv" data-form>
         <form action="#">
             <div class="currentLocation">
                 <p>Which station are you leaving from?</p>
@@ -72,8 +75,6 @@
             </div>
         </form>
     </div>
-
-
 
 
 
