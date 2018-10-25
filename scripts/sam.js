@@ -1,4 +1,4 @@
-// THIS IS TEMPORARY
+// Variable containing all of our neighborhood objects
 const json = {
     "North Springs": {
         "Alt_Names": [],
@@ -192,13 +192,6 @@ const json = {
     }
 }
 
-
-
-
-
-
-
-
 // Function that automatically draws the current time
 function getCurrentTime() {
     const now = new Date();
@@ -228,7 +221,9 @@ function createStation(key) {
     return stationName;
 }
 
-function constraintMessage() {
+// Writing a function that will append output data into our new section
+function appendOutputData() {
+    const outputData = document.createElement('')
 
 }
 
