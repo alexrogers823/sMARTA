@@ -192,6 +192,14 @@ const json = {
     }
 }
 
+// Variable referencing the 'submit' button to add an event listener
+const triggerElement = document.querySelector('[data-trigger]'); 
+
+
+// Variable referencing our formDiv by its data attribute
+const formElement = document.querySelector('[data-form]');
+
+
 // Function that automatically draws the current time
 function getCurrentTime() {
     const now = new Date();
@@ -199,8 +207,6 @@ function getCurrentTime() {
     const hours = now.getHours();
     return now;
 }
-
-getCurrentTime();
 
 // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
 function addToDropdown(json) {
@@ -222,9 +228,24 @@ function createStation(key) {
 }
 
 // Writing a function that will append output data into our new section
-function appendOutputData() {
-    const outputData = document.createElement('')
+function appendOutputData(input) {
+    // creating a paragraph, into which our output data will be placed
+    const outputParagraph = document.createElement("p");
+    
+    // adding an event listener to detect when the submit button is clicked
+    // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
+    triggerElement.addEventListener("click", function() {
+        document.querySelector('[data-form]').innerHTML = 'insert output information here'
+    });
+}
 
+// Function that will calculate how much time the next train will take to arrive, relative to the exact current time when the submit button is pressed
+function timeToNextTrain() {
+    // creating a variable 
+    const now = getCurrentTime();
+    const timeToTrain = (now.getMinutes() - MARTA[0].NEXT_ARR);
+    formElement.appendChild(timeToTrain);
+    
 }
 
 addToDropdown(json);
