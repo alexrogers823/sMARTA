@@ -237,6 +237,8 @@ function appendOutputData(input) {
     triggerElement.addEventListener("click", function() {
         document.querySelector('[data-form]').innerHTML = 'insert output information here'
     });
+
+    outputParagraph.appendChild();
 }
 
 // Function that will calculate how much time the next train will take to arrive, relative to the exact current time when the submit button is pressed
