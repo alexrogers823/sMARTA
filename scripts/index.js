@@ -30,26 +30,32 @@ const arrayOfPromises = APIs.map(site => fetchData(site));
 
 
 Promise.all(arrayOfPromises)
-.then(arrayOfResults => {
-  martaAPI = arrayOfResults[0];
-  populationData = arrayOfResults[1];
-  stations = Object.keys(populationData); //Pseudo-code
-})
-.then(rearrangeCrimeData)
-.then(addCrimeToStations); //Check this function
+  .then(arrayOfResults => {
+    martaAPI = arrayOfResults[0];
+    populationData = arrayOfResults[1];
+    stations = Object.keys(populationData);
+    rearrangeCrimeData();
+    addCrimeToStations();
+  });
+// .then()
+// .then(); //Check this function
+
 
 // ==== CrimeData rearrange ====
 function rearrangeCrimeData() {
   for (let i = 1; i < crimeInfo.length; i++) {
     ExtractNeighborhood(crimeInfo[i][5]);
-    const month = ExtractMonth(crimeInfo[i][2]);
-    addCrimes(crimeInfo[i][5], month, i);
+    if (crimeInfo[i].includes("/")) {
+      const month = ExtractMonth(crimeInfo[i][2]);
+      addCrimes(crimeInfo[i][5], month, i);
+    }
+    // console.log(stations);
   }
 }
 
 function ExtractMonth(date) {
-    const dateArr = date.split("/")
-    return parseInt(dateArr[0]) - 1
+    const dateArr = date.split("/");
+    return parseInt(dateArr[0]) - 1;
 
 }
 
@@ -88,16 +94,20 @@ function addCrimes(neighborhood, months, i) {
 // ===== Add crime to station =====
 
 function addCrimeToStations() {
+  // debugger;
   stations.forEach(station => {
     addTypesOfCrimes(station);
     totalCrimes(station);
   });
+
 }
 
 function addTypesOfCrimes(station) {
   const crimesList = [];
   const hood = [...populationData[station].Alt_Names];
+  // debugger;
   hood.forEach(place => {
+    // debugger;
     crimesList.push(...ATLCrimeData[place]["Types of Crimes"]);
   });
   populationData[station]["Types of Crimes"] = [...new Set(crimesList)];
