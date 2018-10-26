@@ -229,17 +229,54 @@ function createStation(key) {
 }
 
 // Writing a function that will append output data into our new section
-function appendOutputData(input) {
+function appendOutputData() {
     // creating a paragraph, into which our output data will be placed (<p> will be inside the <form>)
-    const outputParagraph = document.createElement("p");
+    let outputParagraph = document.createElement("p");
     
     // adding an event listener to detect when the submit button is clicked
     // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
-    triggerElement.addEventListener("click", function() {
-        outputParagraph.textContent = arrayOfResults;
-        formElement.appendChild(outputParagraph);
-    });
+    formElement.innerHTML = '';
+    makeOutput();
 }
+
+triggerElement.addEventListener("click", appendOutputData);
+
+function makeOutput() {
+    const crimeRate = document.createElement("p");
+    const travelTime = document.createElement("p");
+    const timeConstraints = document.createElement("p");
+    const chanceOfGettingTrain = document.createElement("p");
+
+    const paragraphObject = [
+        {paragraph: crimeRate,
+        text: 'The crime rate in your area is X'},
+        {paragraph: travelTime,
+        text: 'Your trip will take approximately X minutes'},
+        {paragraph: timeConstraints,
+        text: 'You will/will not be able to reach your destination in time'}, 
+        {paragraph: chanceOfGettingTrain,
+        text: 'You may have to wait at least 1 train before you can board.'}
+    ];
+
+    for (let i=0; i<paragraphObject.length; i++) {
+        // no 'constraints' variable exists yet
+
+        // if(i=2 && constraints===false) {
+        //     continue;
+        // } 
+        paragraphObject[i].paragraph.textContent = paragraphObject[i].text;
+        // debugger;
+        formElement.appendChild(paragraphObject[i].paragraph);
+    }
+
+
+
+}
+
+// function setText(paragraph) {
+    
+// }
+
 
 // Function that will calculate how much time the next train will take to arrive, relative to the exact current time when the submit button is pressed
 function timeToNextTrain() {
