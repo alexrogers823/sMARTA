@@ -20,7 +20,8 @@
     "Linked": ["Dunwoody"]
   },
   "Buckhead": {
-    "Alt_Names": [],
+    "Alt_Names": ["North Buckhead", "Peachtree Park", "Pine Hills", "Buckhead Forest",
+      "Buckhead Heights", "Buckhead Village", "Ridgedale Park", "South Tuxedo Park"],
     "Population": 174136,
     "Linked": null
   },
@@ -35,32 +36,33 @@
     "Linked": null
   },
   "Brookhaven": {
-    "Alt_Names": ["Brookhaven/Oglethorpe"],
+    "Alt_Names": ["Brookhaven"],
     "Population": 51567,
     "Linked": null
   },
   "Lenox": {
-    "Alt_Names": [],
+    "Alt_Names": ["Lenox", "Morningside/Lenox Park", "Peachtree Heights West"],
     "Population": 174136,
     "Linked": ["Buckhead"]
   },
   "Lindbergh Center": {
-    "Alt_Names": [],
+    "Alt_Names": ["Lindbergh/Morosgo", "Peachtree Heights East", "Arden/Habersham"],
     "Population": 26818,
     "Linked": null
   },
   "Arts Center": {
-    "Alt_Names": [],
+    "Alt_Names": ["Ansley Park", "Ardmore", "Atlantic Station", "Ridgewood Heights",
+      "Sherwood Forest", "Springlake"],
     "Population": 40909,
     "Linked": ["Midtown", "North Avenue"]
   },
   "Midtown": {
-    "Alt_Names": [],
+    "Alt_Names": ["Midtown"],
     "Population": 40909,
     "Linked": ["Arts Center", "North Avenue"]
   },
   "North Avenue": {
-    "Alt_Names": [],
+    "Alt_Names": ["Georgia Tech"],
     "Population": 40909,
     "Linked": ["Midtown", "Arts Center"]
   },
@@ -75,32 +77,33 @@
     "Linked": ["Five Points", "Civic Center", "Dome"]
   },
   "Five Points": {
-    "Alt_Names": [],
+    "Alt_Names": ["Downtown"],
     "Population": 32105,
     "Linked": ["Civic Center", "Peachtree Center", "Dome"]
   },
   "Garnett": {
-    "Alt_Names": [],
+    "Alt_Names": ["Summerhill"],
     "Population": 22069,
     "Linked": ["Vine City", "Ashby"]
   },
   "West End": {
-    "Alt_Names": [],
+    "Alt_Names": ["Adair Park", "West End"],
     "Population": 27988,
     "Linked": ["Oakland City", "Lakewood/Ft. McPherson"]
   },
   "Oakland City": {
-    "Alt_Names": [],
+    "Alt_Names": ["Oakland City", "Adams Park", "Amal Heights", "Capitol View",
+      "South Atlanta", "Sylvan Hills", "The Villages at Carver"],
     "Population": 27988,
     "Linked": ["West End", "Lakewood/Ft. McPherson"]
   },
   "Lakewood/Ft. McPherson": {
-    "Alt_Names": ["Lakewood", "Ft. McPherson"],
+    "Alt_Names": ["Lakewood", "Fort McPherson", "Ashley Courts", "Swallow Circle/Baywood"],
     "Population": 27988,
     "Linked": ["West End", "Oakland City"]
   },
   "East Point": {
-    "Alt_Names": [],
+    "Alt_Names": ["Rebel Valley Forest", "Rosedale Heights", "Rue Royal"],
     "Population": 35477,
     "Linked": null
   },
@@ -115,27 +118,30 @@
     "Linked": null
   },
   "Hamilton E. Holmes": {
-    "Alt_Names": ["Collier Park"],
+    "Alt_Names": ["Collier Park", "English Park", "Fairburn Heights", "Fairburn Mays",
+       "Fairburn Road/Wisteria Lane", "Fairburn Tell", "Fairburn Acres", "Florida Heights",
+      "Adamsville", "Atlanta Industrial Park", "Audobon Forest", "Audobon Forest West",
+      "Baker Hills", "Bakers Ferry", "Regency Trace", "Ridgecrest Forest"],
     "Population": 57795,
     "Linked": null
   },
   "West Lake": {
-    "Alt_Names": [],
+    "Alt_Names": ["West Lake"],
     "Population": 1954,
     "Linked": null
   },
   "Bankhead": {
-    "Alt_Names": [],
+    "Alt_Names": ["Bankhead Courts", "Bankhead/Bolton", "Bankhead", "Riverside", "Scotts Crossing"],
     "Population": 79864,
     "Linked": null
   },
   "Ashby": {
-    "Alt_Names": [],
+    "Alt_Names": ["Ashview Heights", "Atlanta University Center"],
     "Population": 22069,
     "Linked": ["Vine City", "Garnett"]
   },
   "Vine City": {
-    "Alt_Names": [],
+    "Alt_Names": ["English Avenue", "Vine City"],
     "Population": 22069,
     "Linked": ["Ashby", "Garnett"]
   },
@@ -150,22 +156,23 @@
     "Linked": null
   },
   "King Memorial": {
-    "Alt_Names": ["Sweet Auburn"],
+    "Alt_Names": ["Sweet Auburn", "Old Fourth Ward"],
     "Population": 20771,
     "Linked": null
   },
   "Inman Park": {
-    "Alt_Names": ["Reynoldstown"],
+    "Alt_Names": ["Inman Park", "Reynoldstown", "Atkins Park", "East Atlanta",
+      "Virginia Highland"],
     "Population": 18725,
     "Linked": null
   },
   "Edgewood": {
-    "Alt_Names": [],
+    "Alt_Names": ["Druid Hills"],
     "Population": 30513,
     "Linked": null
   },
   "East Lake": {
-    "Alt_Names": [],
+    "Alt_Names": ["The Villages at East Lake"],
     "Population": 11788,
     "Linked": null
   },
@@ -185,7 +192,7 @@
     "Linked": ["Decatur"]
   },
   "Indian Creek": {
-    "Alt_Names": [],
+    "Alt_Names": ["Rockdale"],
     "Population": 54680,
     "Linked": null
   }
