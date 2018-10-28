@@ -37,6 +37,7 @@ Promise.all(arrayOfPromises)
     rearrangeCrimeData();
     addCrimeToStations();
   });
+  // .catch(err => console.log(err));
 // .then()
 // .then(); //Check this function
 
@@ -45,7 +46,8 @@ Promise.all(arrayOfPromises)
 function rearrangeCrimeData() {
   for (let i = 1; i < crimeInfo.length; i++) {
     ExtractNeighborhood(crimeInfo[i][5]);
-    if (crimeInfo[i].includes("/")) {
+    let date = crimeInfo[i][2];
+    if (date && date.includes("/")) {
       const month = ExtractMonth(crimeInfo[i][2]);
       addCrimes(crimeInfo[i][5], month, i);
     }
@@ -106,10 +108,14 @@ function addTypesOfCrimes(station) {
   const crimesList = [];
   const hood = [...populationData[station].Alt_Names];
   // debugger;
-  hood.forEach(place => {
-    // debugger;
-    crimesList.push(...ATLCrimeData[place]["Types of Crimes"]);
-  });
+  if (hood.length) {
+    hood.forEach(place => {
+      // debugger;
+      if (ATLCrimeData[place]) {
+        crimesList.push(...ATLCrimeData[place]["Types of Crimes"]);
+      }
+    });
+  }
   populationData[station]["Types of Crimes"] = [...new Set(crimesList)];
 
 }
@@ -117,11 +123,15 @@ function addTypesOfCrimes(station) {
 function totalCrimes(station) {
   let crimeNumber = 0;
   const hood = [...populationData[station].Alt_Names];
-  hood.forEach(place => {
-    for (let i = 0; i < 12; i++) {
-      crimeNumber += ATLCrimeData[place][`${i}`];
-    }
+  if (hood.length) {
+    hood.forEach(place => {
+      if (ATLCrimeData[place]) {
+        for (let i = 0; i < 12; i++) {
+          crimeNumber += ATLCrimeData[place][`${i}`];
+        }
+      }
   });
+}
 
   populationData[station]["Total Crimes"] = crimeNumber;
 }
