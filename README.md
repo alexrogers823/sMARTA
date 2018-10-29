@@ -8,13 +8,13 @@ We all collectively came up with the idea to incorporate public transit data wit
 
 
 - [Sam Erickson](https://github.com/samerickson95)
-(Sam, write your contributions here)</dd>
+(Sam, write your contributions here)
 
 - [Will Harris](https://github.com/harriswill22)
-(Will, write your contributions here)</dd>
+(Will, write your contributions here)
 
 - [Alex Rogers](https://github.com/alexrogers823)
-(Alex, write your contributions here)</dd>
+(Alex, write your contributions here)
 
 
 
