@@ -13,13 +13,24 @@
     <header>
         <h1>sMARTA</h1>
     </header>
-
+    
     <p data-current-time>
         Current Time:
     </p>
-
+    
+    <div class="formDiv" data-form>
     <div class="plan-a-trip-box">
             <h2 class="plan-a-trip-box_heading">Plan a Trip</h2>
+            <div class="plan-a-trip-box">
+                    <div class="Top-3-crimeStations" data-Top3CrimeStations>
+                        <h3>Top 3 Stations with Highest Crime Rate</h3>
+            
+                        <li>
+            
+                        </li>
+            
+                    </div>
+            
           <div class="destination">
               <p>Which station are you going to?</p>
               <select name="stationsTo" data-stations-to>
@@ -40,17 +51,11 @@
     <!-- </div> -->
 
 
-    <div class="plan-a-trip-box">
-        <div class="Top-3-crimeStations" data-Top3CrimeStations>
-            <h3>Top 3 Stations with Highest Crime Rate</h3>
+    
 
-            <li>
 
-            </li>
 
-        </div>
-
-        <div class="formDiv" data-form>
+        <!-- formdiv was here -->
             <form action="#">
                 <div class="currentLocation">
                     <p>Which station are you leaving from?</p>
@@ -79,70 +84,7 @@
               <input type="radio" name="timeConstraints" id="r7" value ="50-60 minutes">
               50-60 minutes <br>
             </div>
-              <!-- <select name="timeConstraints">
-                  <option value="">
-                  </option>
-                  <option value="">
-                      Less than 15 minutes
-                  </option>
-                  <option value="">
-                      15-20 minutes
-                  </option>
-                  <option value="">
-                      20-30 minutes
-                  </option>
-                  <option value="">
-                      30-40 minutes
-                  </option>
-                  <option value="">
-                      40-50 minutes
-                  </option>
-                  <option value="">
-                      50-60 minutes
-                  </option>
-              </select>
-          </div> -->
-
-
-
-
-                <!-- <div class="destination">
-                    <p>Which station are you going to?</p>
-                    <select name="stationsTo" class="stationsTo" data-stations-to>
-                        <option value="">
-                            Please choose a station:
-                        </option>
-                    </select>
-                </div>
-                <br><br>
-
-                <div class="timeInput">
-                    <p>How much time do you have to get to your destination?</p>
-                    <select name ="timeConstraints" class="timeConstraints">
-                        <option value="">
-                            I am in no rush.
-                        </option>
-                        <option value="">
-                            Less than 15 minutes
-                        </option>
-                        <option value="">
-                            15-20 minutes
-                        </option>
-                        <option value="">
-                            20-30 minutes
-                        </option>
-                        <option value="">
-                            30-40 minutes
-                        </option>
-                        <option value="">
-                            40-50 minutes
-                        </option>
-                        <option value="">
-                            50-60 minutes
-                        </option>
-                    </select>
-                </div>
-        </div> -->
+    
         <br><br>
 
         <div class="submitButton" data-trigger>
@@ -166,6 +108,7 @@
 <script src="scripts/CrimeData-csv.js"></script>
 <script src="scripts/PapaParse.js"></script>
 <script src="scripts/index.js"></script>
+<script src="scripts/TotalTime.js"></script>
 <!-- <script src="scripts/CrimeData.js"></script> -->
 <script src="scripts/sam.js"></script>
 </body>

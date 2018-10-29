@@ -192,7 +192,6 @@ const json = {
     }
 }
 
-
 // Variable referencing the 'submit' button to add an event listener
 const triggerElement = document.querySelector('[data-trigger]'); 
 
@@ -209,7 +208,7 @@ const currentTime = document.querySelector('[data-current-time]');
 // Function that automatically draws the current time
 function getCurrentTime() {
 
-    const now = new Date();
+    const now = new Date().toLocaleTimeString('en-US');
     // const minutes = now.getMinutes();
     // const hours = now.getHours();
     currentTime.textContent += `${now}`;
@@ -223,21 +222,31 @@ getCurrentTime();
 
 // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
 function addToDropdown(json) {
+    // console.log(json);
     // const jsonArray = [...json];
     const selectFrom = document.querySelector('[data-stations-from]');
     const selectTo = document.querySelector('[data-stations-to]');
+
+    console.log(Object.keys(json).sort());
+
+
     Object.keys(json).sort().forEach(key => {
         selectFrom.appendChild(createStation(key));
         selectTo.appendChild(createStation(key));
     })
+    console.log(selectFrom);
+    
 }
 addToDropdown(json);
+
+
 
 // Helper function that externally creates new <option> elements containing the station names
 function createStation(key) {
     const stationName = document.createElement('option');
     stationName.textContent = key;
     stationName.setAttribute('value', key);
+    // console.log(stationName);
     return stationName;
 }
 
@@ -249,9 +258,9 @@ function appendOutputData() {
     // adding an event listener to detect when the submit button is clicked
     // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
     
-    makeOutput();
     // getRadioButtonValue();
     formElement.innerHTML = '';
+    makeOutput();
     
     
     
@@ -271,12 +280,26 @@ function makeOutput() {
     console.log(radioButtons);
     for(x=0; x<radioButtons.length; x++) {
         if(radioButtons[x].checked) {
-            timeConstraints.textContent = radioButtons[x].value;
+            if(radioButtons[x].value === "no rush") {
+                console.log('no rush');
+            } else if(radioButtons[x].value === "less than 15 minutes") {
+                console.log('less than 15 minutes');
+            } else if(radioButtons[x].value === "15-20 minutes") {
+                console.log('15-20 minutes');
+            } else if(radioButtons[x].value === "20-30") {
+                console.log('20-30 minutes');
+            } else if(radioButtons[x].value === "30-40") {
+                console.log('30-40 minutes');
+            } else if(radioButtons[x].value === "40-50") {
+                console.log('40-50 minutes');
+            } else if (radioButtons[x].value === "50-60") {
+                console.log('50-60 minutes');
+            } else {
+                console.log('yer good');
+            }
+            
         }
-        console.log(timeConstraints);
     }
-
-
 
 
 
@@ -300,11 +323,10 @@ function makeOutput() {
         paragraphObject[i].paragraph.textContent = paragraphObject[i].text;
         
         formElement.appendChild(paragraphObject[i].paragraph);
-    }
+    };
 
+};        
 
-
-}
 
 // function setText(paragraph) {
     
@@ -312,10 +334,9 @@ function makeOutput() {
 
 
 // Function that will calculate how much time the next train will take to arrive, relative to the exact current time when the submit button is pressed
-function timeToNextTrain() {
+function timeToNextTrain(){
     // creating a variable 
     const now = getCurrentTime();
     const timeToTrain = (now.getMinutes() - martaAPI[0].NEXT_ARR);
     formElement.appendChild(timeToTrain);
-    
 }
