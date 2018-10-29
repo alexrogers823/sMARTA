@@ -192,12 +192,16 @@ const json = {
     }
 }
 
+
 // Variable referencing the 'submit' button to add an event listener
 const triggerElement = document.querySelector('[data-trigger]'); 
 
 
 // Variable referencing our formDiv by its data attribute
 const formElement = document.querySelector('[data-form]');
+
+// references our timeInput in HTML
+const timeInputElement = document.querySelector('[data-timeInput]');
 
 
 // Function that automatically draws the current time
@@ -235,9 +239,16 @@ function appendOutputData() {
     
     // adding an event listener to detect when the submit button is clicked
     // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
-    formElement.innerHTML = '';
+    
     makeOutput();
+    // getRadioButtonValue();
+    formElement.innerHTML = '';
+    
+    
+    
 }
+
+
 
 triggerElement.addEventListener("click", appendOutputData);
 
@@ -246,6 +257,19 @@ function makeOutput() {
     const travelTime = document.createElement("p");
     const timeConstraints = document.createElement("p");
     const chanceOfGettingTrain = document.createElement("p");
+
+    let radioButtons = document.getElementsByName("timeConstraints");
+    console.log(radioButtons);
+    for(x=0; x<radioButtons.length; x++) {
+        if(radioButtons[x].checked) {
+            timeConstraints.textContent = radioButtons[x].value;
+        }
+        console.log(timeConstraints);
+    }
+
+
+
+
 
     const paragraphObject = [
         {paragraph: crimeRate,
@@ -265,7 +289,7 @@ function makeOutput() {
         //     continue;
         // } 
         paragraphObject[i].paragraph.textContent = paragraphObject[i].text;
-        // debugger;
+        
         formElement.appendChild(paragraphObject[i].paragraph);
     }
 
