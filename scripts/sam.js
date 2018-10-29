@@ -203,14 +203,23 @@ const formElement = document.querySelector('[data-form]');
 // references our timeInput in HTML
 const timeInputElement = document.querySelector('[data-timeInput]');
 
+// current time
+const currentTime = document.querySelector('[data-current-time]');
 
 // Function that automatically draws the current time
 function getCurrentTime() {
+
     const now = new Date();
-    const minutes = now.getMinutes();
-    const hours = now.getHours();
-    return now;
+    // const minutes = now.getMinutes();
+    // const hours = now.getHours();
+    currentTime.textContent += `${now}`;
 }
+getCurrentTime();
+
+// setInterval({
+//     document.querySelector('[data-current-time]').innerHTML = '';
+//     getCurrentTime;}, 1000
+// );
 
 // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
 function addToDropdown(json) {
