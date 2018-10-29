@@ -202,12 +202,16 @@ const formElement = document.querySelector('[data-form]');
 // references our timeInput in HTML
 const timeInputElement = document.querySelector('[data-timeInput]');
 
+// variables referencing our 2 dropdown menus
+const selectFrom = document.querySelector('[data-stations-from]');
+const selectTo = document.querySelector('[data-stations-to]');
+
 // current time
 const currentTime = document.querySelector('[data-current-time]');
 
 // Function that automatically draws the current time
 function getCurrentTime() {
-
+    
     const now = new Date().toLocaleTimeString('en-US');
     // const minutes = now.getMinutes();
     // const hours = now.getHours();
@@ -216,20 +220,18 @@ function getCurrentTime() {
 getCurrentTime();
 
 // setInterval({
-//     document.querySelector('[data-current-time]').innerHTML = '';
-//     getCurrentTime;}, 1000
-// );
-
-// Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
-function addToDropdown(json) {
-    // console.log(json);
-    // const jsonArray = [...json];
-    const selectFrom = document.querySelector('[data-stations-from]');
-    const selectTo = document.querySelector('[data-stations-to]');
-
-    console.log(Object.keys(json).sort());
-
-
+    //     document.querySelector('[data-current-time]').innerHTML = '';
+    //     getCurrentTime;}, 1000
+    // );
+    
+    // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
+    function addToDropdown(json) {
+        // console.log(json);
+        // const jsonArray = [...json];
+        
+        console.log(Object.keys(json).sort());
+        
+        
     Object.keys(json).sort().forEach(key => {
         selectFrom.appendChild(createStation(key));
         selectTo.appendChild(createStation(key));
@@ -267,10 +269,39 @@ function appendOutputData() {
 }
 
 
-
+// 3 variables needed to pass into our makeOutput function
 triggerElement.addEventListener("click", appendOutputData);
+const selectFromText = selectFrom.options[selectFrom.selectedIndex].text;
+const selectToText = selectTo.options[selectTo.selectedIndex].text;
 
-function makeOutput() {
+
+let constraints;
+    for(x=0; x<radioButtons.length; x++) {
+        if(radioButtons[x].checked) {
+            constraints = radioButtons[x].value;
+            // if(radioButtons[x].value === "no rush") {
+            //     console.log('no rush');
+            // } else if(radioButtons[x].value === "less than 15 minutes") {
+            //     console.log('less than 15 minutes');
+            // } else if(radioButtons[x].value === "15-20 minutes") {
+            //     console.log('15-20 minutes');
+            // } else if(radioButtons[x].value === "20-30 minutes") {
+            //     console.log('20-30 minutes');
+            // } else if(radioButtons[x].value === "30-40 minutes") {
+            //     console.log('30-40 minutes');
+            // } else if(radioButtons[x].value === "40-50 minutes") {
+            //     console.log('40-50 minutes');
+            // } else if (radioButtons[x].value === "50-60 minutes") {
+            //     console.log('50-60 minutes');
+            // } else {
+            //     console.log('yer good');
+            // }
+        }
+    }
+
+
+
+function makeOutput(selectFromText, selectToText, constraints) {
     const crimeRate = document.createElement("p");
     const travelTime = document.createElement("p");
     const timeConstraints = document.createElement("p");
@@ -278,28 +309,8 @@ function makeOutput() {
 
     let radioButtons = document.getElementsByName("timeConstraints");
     console.log(radioButtons);
-    for(x=0; x<radioButtons.length; x++) {
-        if(radioButtons[x].checked) {
-            if(radioButtons[x].value === "no rush") {
-                console.log('no rush');
-            } else if(radioButtons[x].value === "less than 15 minutes") {
-                console.log('less than 15 minutes');
-            } else if(radioButtons[x].value === "15-20 minutes") {
-                console.log('15-20 minutes');
-            } else if(radioButtons[x].value === "20-30") {
-                console.log('20-30 minutes');
-            } else if(radioButtons[x].value === "30-40") {
-                console.log('30-40 minutes');
-            } else if(radioButtons[x].value === "40-50") {
-                console.log('40-50 minutes');
-            } else if (radioButtons[x].value === "50-60") {
-                console.log('50-60 minutes');
-            } else {
-                console.log('yer good');
-            }
-            
-        }
-    }
+    
+    // return constraints;
 
 
 
