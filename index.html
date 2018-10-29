@@ -5,29 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>sMARTA</title>
+    <link rel="stylesheet" href="styles/index.css">
+
 </head>
-
 <body>
-  <div class="header">
-      <h1>sMARTA</h1>
-      <h3>MARTA, smarter.</h3>
-  </div>
-  <!-- Establishing our overarching div for the entire input form -->
-  <!-- This div will be overwritten with the output information once the user clicks 'submit' -->
-      <!-- addEventListener('click', submit) will trigger this overwrite -->
-  <div class="formDiv" data-form>
-      <form action="#">
-          <div class="currentLocation">
-              <p>Which station are you leaving from?</p>
-              <select name="stationsFrom" required data-stations-from>
-                  <option value="">
-                      Please choose a station:
-                  </option>
-              </select>
-          </div>
-          <br><br>
-
+    <header>
+        <h1>sMARTA</h1>
+    </header>
+    
+    <div class="plan-a-trip-box">
+            <h2 class="plan-a-trip-box_heading">Plan a Trip</h2>
           <div class="destination">
               <p>Which station are you going to?</p>
               <select name="stationsTo" data-stations-to>
@@ -39,6 +27,29 @@
           <br><br>
 <!-- about to change timeInput -->
           <div class="timeInput" data-timeInput>
+
+    <!-- Establishing our overarching div for the entire input form -->
+    <!-- This div will be overwritten with the output information once the user clicks 'submit' -->
+    <!-- addEventListener('click', submit) will trigger this overwrite -->
+        <!-- <div class="Stations-With-Crime-Box"> -->
+        <!-- <h2 class ="Stations-With-Crime-Box">High Crime Rate Stations</h2> -->
+    <!-- </div> -->
+
+    
+
+        <div class="formDiv" data-form>
+            <form action="#">
+                <div class="currentLocation">
+                    <p>Which station are you leaving from?</p>
+                    <select name="stationsFrom" class="stationsFrom" required data-stations-from>
+                        <option value="">
+                            Please choose a station:
+                        </option>
+                    </select>
+                </div>
+                <br><br>
+
+          <div class="timeInput">
               <p>How much time do you have to get to your destination?</p>
               <input type="radio" name="timeConstraints" id="r1" value ="no rush">
               I am in no rush. <br>
@@ -82,25 +93,68 @@
 
 
 
+                <!-- <div class="destination">
+                    <p>Which station are you going to?</p>
+                    <select name="stationsTo" class="stationsTo" data-stations-to>
+                        <option value="">
+                            Please choose a station:
+                        </option>
+                    </select>
+                </div>
+                <br><br>
 
-          <br><br>
+                <div class="timeInput">
+                    <p>How much time do you have to get to your destination?</p>
+                    <select name ="timeConstraints" class="timeConstraints">
+                        <option value="">
+                            I am in no rush.
+                        </option>
+                        <option value="">
+                            Less than 15 minutes
+                        </option>
+                        <option value="">
+                            15-20 minutes
+                        </option>
+                        <option value="">
+                            20-30 minutes
+                        </option>
+                        <option value="">
+                            30-40 minutes
+                        </option>
+                        <option value="">
+                            40-50 minutes
+                        </option>
+                        <option value="">
+                            50-60 minutes
+                        </option>
+                    </select>
+                </div>
+        </div> -->
+        <br><br>
 
-          <div class="submitButton">
-              <input type="button" value="Plan Trip" data-trigger>
-          </div>
-      </form>
-  </div>
+        <div class="submitButton" data-trigger>
+            <input type="button" value="Plan Trip" class="submitButton">
+        </div>
+        </form>
+    </div>
+
+
+    <footer class="footer">
+        <h2></h2>
+        <ul>
+            
+        </ul>
+    </footer>
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js"></script>
-  <script src="scripts/config.js"></script>
-  <script src="scripts/CrimeData-csv.js"></script>
-  <script src="scripts/PapaParse.js"></script>
-  <script src="scripts/index.js"></script>
-  <!-- <script src="scripts/CrimeData.js"></script> -->
-  <script src="scripts/sam.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/CrimeData-csv.js"></script>
+<script src="scripts/PapaParse.js"></script>
+<script src="scripts/index.js"></script>
+<!-- <script src="scripts/CrimeData.js"></script> -->
+<script src="scripts/sam.js"></script>
 </body>
 
 </html>
