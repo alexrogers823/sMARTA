@@ -1,5 +1,5 @@
 # sMARTA
-### Marta, smarter...
+### MARTA, smarter...
 
 sMARTA is a public transit app that provides the user with the time it takes to get to their desired destination via train, when the next train will arrive, and if it's feasible for them to get to their destination on time. It also lets the user know if they can get on the first available train, as well as the crime rate and details for the desired destination.
 
@@ -8,7 +8,9 @@ We all collectively came up with the idea to incorporate public transit data wit
 
 
 [Sam Erickson](https://github.com/samerickson95)
-- <p>(Sam, write your contributions here)</p>
+- <p>
+My primary contributions to sMARTA have been establishing the framework of our HTML file, formatting our user input section and incorporating the resulting output onto the page. In our input form, I set up our dropdown lists and used JavaScript to draw in real-time information about the trains, and created our radio buttons for the user. Additionally, I worked on setting up a function to determine the time it will take for the next train to arrive, relative to the current time when the user presses the _Plan Trip_ button. I also wrote our Keynote presentation.
+</p>
 
 [Will Harris](https://github.com/harriswill22)
 - <p>()</p>
