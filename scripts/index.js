@@ -96,7 +96,6 @@ function addCrimes(neighborhood, months, i) {
 // ===== Add crime to station =====
 
 function addCrimeToStations() {
-  // debugger;
   stations.forEach(station => {
     addTypesOfCrimes(station);
     totalCrimes(station);
@@ -107,10 +106,10 @@ function addCrimeToStations() {
 function addTypesOfCrimes(station) {
   const crimesList = [];
   const hood = [...populationData[station].Alt_Names];
-  // debugger;
+  
   if (hood.length) {
     hood.forEach(place => {
-      // debugger;
+      
       if (ATLCrimeData[place]) {
         crimesList.push(...ATLCrimeData[place]["Types of Crimes"]);
       }
