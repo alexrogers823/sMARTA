@@ -209,7 +209,7 @@ const currentTime = document.querySelector('[data-current-time]');
 // Function that automatically draws the current time
 function getCurrentTime() {
 
-    const now = new Date();
+    const now = new Date().toLocaleTimeString('en-US');
     // const minutes = now.getMinutes();
     // const hours = now.getHours();
     currentTime.textContent += `${now}`;
