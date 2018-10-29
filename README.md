@@ -7,13 +7,13 @@ sMARTA is a public transit app that provides the user with the time it takes to 
 We all collectively came up with the idea to incorporate public transit data with crime rate and population density. We also planned out our workflow together, using Kanban-style organization and solving problems as a team.
 
 
-- [Sam Erickson](https://github.com/samerickson95)
-<p>(Sam, write your contributions here)</p>
+[Sam Erickson](https://github.com/samerickson95)
+- <p>(Sam, write your contributions here)</p>
 
-- [Will Harris](https://github.com/harriswill22)
+[Will Harris](https://github.com/harriswill22)
 <p>(Will, write your contributions here)</p>
 
-- [Alex Rogers](https://github.com/alexrogers823)
+[Alex Rogers](https://github.com/alexrogers823)
 <p>(Alex, write your contributions here)</p>
 
 
