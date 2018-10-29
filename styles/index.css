@@ -1,16 +1,20 @@
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 
 }
 
@@ -20,7 +24,7 @@ header {
   width: 100%;
   height: 100px;
   background-image: url(MartaColors.jpeg);
-  background-position:center;
+  background-position: center;
   background-size: contain;
 }
 
@@ -32,35 +36,43 @@ header {
 
 .plan-a-trip-box {
   background-color: #00bbe5;
-  
+
 }
 
 .stationsFrom {
-  color: #fff;
+  color: black;
 }
 
 .stationsTo {
-  color: #fff;
+  color: black;
 }
+
 .timeConstraints {
-  color: #fff
+  color: black
 }
 
-
+.Top-3-crimeStations {
+  display: none;
+  border: 5px solid black;
+}
 
 .submitButton {
   color: black;
   text-size-adjust: 12px;
 }
 
-
+.submitButton a:hover .fab,
+.submitButton a:hover .fas,
+  {
+  cursor: pointer;
+}
 
 .footer {
   text-align: center;
   width: 100%;
   height: 100px;
   background-image: url(MartaColors.jpeg);
-  background-position:center;
+  background-position: center;
   background-size: contain;
 }
 
@@ -68,6 +80,14 @@ header {
 
 
 
-media screen and (min-width: 900px ) {
+@media screen and (min-width: 900px) {
+  .plan-a-trip-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .Top-3-crimeStations {
+    display: block;
+  }
 }
