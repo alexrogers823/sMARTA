@@ -1,23 +1,22 @@
 # sMARTA
 ### Marta, smarter...
 
-## Summary
 sMARTA is a public transit app that provides the user with the time it takes to get to their desired destination via train, when the next train will arrive, and if it's feasible for them to get to their destination on time. It also lets the user know if they can get on the first available train, as well as the crime rate and details for the desired destination.
 
 ## Team Members and Contributions
 We all collectively came up with the idea to incorporate public transit data with crime rate and population density. We also planned out our workflow together, using Kanban-style organization and solving problems as a team.
 
-<dl>
-  <dt>[Sam Erickson](https://github.com/samerickson95)</dt>
-  <dd>(Sam, write your contributions here)</dd>
 
-  <dt>[Will Harris](https://github.com/harriswill22)</dt>
-  <dd>(Will, write your contributions here)</dd>
+- [Sam Erickson](https://github.com/samerickson95)
+(Sam, write your contributions here)</dd>
 
-  <dt>[Alex Rogers](https://github.com/alexrogers823)</dt>
-  <dd>(Alex, write your contributions here)</dd>
+- [Will Harris](https://github.com/harriswill22)
+(Will, write your contributions here)</dd>
 
-</dl>
+- [Alex Rogers](https://github.com/alexrogers823)
+(Alex, write your contributions here)</dd>
+
+
 
 ## How to Use
 - User puts in the station they are catching the next train at
