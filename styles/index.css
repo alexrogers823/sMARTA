@@ -5,7 +5,69 @@ html {
     box-sizing: inherit;
   }
 
-.header {
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+header {
   text-align: center;
-  color: blue;
+  color: black;
+  width: 100%;
+  height: 100px;
+  background-image: url(MartaColors.jpeg);
+  background-position:center;
+  background-size: contain;
+}
+
+.headElement img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.plan-a-trip-box {
+  background-color: #00bbe5;
+  
+}
+
+.stationsFrom {
+  color: #fff;
+}
+
+.stationsTo {
+  color: #fff;
+}
+.timeConstraints {
+  color: #fff
+}
+
+
+
+.submitButton {
+  color: black;
+  text-size-adjust: 12px;
+}
+
+
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  background-image: url(MartaColors.jpeg);
+  background-position:center;
+  background-size: contain;
+}
+
+
+
+
+
+media screen and (min-width: 900px ) {
+
 }
