@@ -12,6 +12,7 @@
 <body>
     <header>
         <h1>sMARTA</h1>
+        <h3>MARTA smarter</h3>
     </header>
     
     <p data-current-time>
@@ -20,28 +21,14 @@
     
     <div class="formDiv" data-form>
     <div class="plan-a-trip-box">
+            <div class="Top-3-crimeStations" data-Top3CrimeStations>
+                    <h3>Top 3 Stations with Highest Crime Rate</h3>
+                </div>
             <h2 class="plan-a-trip-box_heading">Plan a Trip</h2>
-            <div class="plan-a-trip-box">
-                    <div class="Top-3-crimeStations" data-Top3CrimeStations>
-                        <h3>Top 3 Stations with Highest Crime Rate</h3>
             
-                        <li>
-            
-                        </li>
-            
-                    </div>
-            
-          <div class="destination">
-              <p>Which station are you going to?</p>
-              <select name="stationsTo" data-stations-to>
-                  <option value="">
-                      Please choose a station:
-                  </option>
-              </select>
-          </div>
-          <br><br>
+                    
+        
 <!-- about to change timeInput -->
-          <div class="timeInput" data-timeInput>
 
     <!-- Establishing our overarching div for the entire input form -->
     <!-- This div will be overwritten with the output information once the user clicks 'submit' -->
@@ -49,14 +36,16 @@
         <!-- <div class="Stations-With-Crime-Box"> -->
         <!-- <h2 class ="Stations-With-Crime-Box">High Crime Rate Stations</h2> -->
     <!-- </div> -->
-
-
-    
-
-
-
-        <!-- formdiv was here -->
             <form action="#">
+                    <div class="destination">
+                            <p>Which station are you going to?</p>
+                            <select name="stationsTo" data-stations-to>
+                                <option value="">
+                                    Please choose a station:
+                                </option>
+                            </select>
+                        </div>
+                        <br><br>
                 <div class="currentLocation">
                     <p>Which station are you leaving from?</p>
                     <select name="stationsFrom" class="stationsFrom" required data-stations-from>
@@ -66,8 +55,7 @@
                     </select>
                 </div>
                 <br><br>
-
-          <div class="timeInput">
+         <div class="timeInput" data-timeInput>
               <p>How much time do you have to get to your destination?</p>
               <input type="radio" name="timeConstraints" id="r1" value ="no rush">
               I am in no rush. <br>
@@ -92,7 +80,7 @@
         </div>
         </form>
     </div>
-
+    </div>
 
     <footer class="footer">
         <h2></h2>
