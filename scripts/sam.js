@@ -234,10 +234,12 @@ function addToDropdown(json) {
         selectFrom.appendChild(createStation(key));
         selectTo.appendChild(createStation(key));
     })
-    console.log(selectFrom.value);
+    console.log(selectFrom);
     
 }
 addToDropdown(json);
+
+
 
 // Helper function that externally creates new <option> elements containing the station names
 function createStation(key) {
@@ -256,9 +258,9 @@ function appendOutputData() {
     // adding an event listener to detect when the submit button is clicked
     // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
     
-    makeOutput();
     // getRadioButtonValue();
     formElement.innerHTML = '';
+    makeOutput();
     
     
     

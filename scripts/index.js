@@ -34,6 +34,12 @@ Promise.all(arrayOfPromises)
     martaAPI = arrayOfResults[0];
     populationData = arrayOfResults[1];
     stations = Object.keys(populationData);
+
+
+    stations.forEach(station => {
+      populationData[station].Station_ID;
+    });
+
     rearrangeCrimeData();
     addCrimeToStations();
     topCrimeStations();
@@ -145,9 +151,9 @@ function topCrimeStations() {
   keys.forEach((key, i) => {
     topStations.push([key, values[i]["Total Crimes"]]);
   });
-  console.log(topStations);
+  // console.log(topStations);
   const sorted = topStations.slice().sort((a, b) => b[1] - a[1]);
-  console.log(sorted);
+  // console.log(sorted);
   appendToDivs(sorted[0], sorted[1], sorted[2]);
 }
 
