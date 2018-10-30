@@ -11,7 +11,7 @@ We all collectively came up with the idea to incorporate public transit data wit
 - <p>(Sam, write your contributions here)</p>
 
 [Will Harris](https://github.com/harriswill22)
-- <p>()</p>
+- <p>(My contributions included, Collecting data from the Atlanta Police department API, parsing the excel spreadsheets givin by the department. Helping writing functions for the crime rate data, and train arrival times. I also worked on creating the CSS and html layout.)</p>
 
 [Alex Rogers](https://github.com/alexrogers823)
 - <p>(Alex, write your contributions here)</p>
