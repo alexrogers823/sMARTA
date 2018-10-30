@@ -13,7 +13,7 @@ My primary contributions to sMARTA have been establishing the framework of our H
 </p>
 
 [Will Harris](https://github.com/harriswill22)
-- <p>()</p>
+- <p>(My contributions included, Collecting data from the Atlanta Police department API, parsing the excel spreadsheets givin by the department. Helping writing functions for the crime rate data, and train arrival times. I also worked on creating the CSS and html layout.)</p>
 
 [Alex Rogers](https://github.com/alexrogers823)
 - <p>My priorities revolved around data extraction and transformation from our APIs. I wrote the JSON for our Marta train information. I collaborated with Will to create new datasets based on the Crime API we used, then added those datasets into our MARTA data. I also wrote several JavaScript functions to handle the output content that the user would see based in their input.</p>

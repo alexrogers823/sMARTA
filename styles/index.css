@@ -42,6 +42,7 @@ header {
 
 .plan-a-trip-box {
   background-color: #00bbe5;
+  font-family: 'Helvetica Neue', sans-serif;
 
 }
 
@@ -62,12 +63,19 @@ header {
   border: 5px solid black;
   background-color: red;
   padding: 10px;
-  font-size: 18px
+  font-size: 18px;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .submitButton {
   color: black;
-  text-size-adjust: 12px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.formDiv {
+  background-color: #e6a10e;
+  font-size: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .submitButton:hover 
@@ -103,4 +111,10 @@ header {
     display: block;
     
   }
+
+  .formDiv {
+    background-color: #e6a10e;
+    font-size: 25px
+  }
+
 }
