@@ -16,7 +16,7 @@ My primary contributions to sMARTA have been establishing the framework of our H
 - <p>()</p>
 
 [Alex Rogers](https://github.com/alexrogers823)
-- <p>(Alex, write your contributions here)</p>
+- <p>My priorities revolved around data extraction and transformation from our APIs. I wrote the JSON for our Marta train information. I collaborated with Will to create new datasets based on the Crime API we used, then added those datasets into our MARTA data. I also wrote several JavaScript functions to handle the output content that the user would see based in their input.</p>
 
 
 
