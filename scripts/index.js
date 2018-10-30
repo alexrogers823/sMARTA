@@ -1,14 +1,3 @@
-// In order
-// - Will's promise.js
-// - Will's CrimeData-csv.js
-// - Will's PapaParse.js
-// - CrimeData.js
-// - map_crime_data.js (don't need anymore)
-// - addCrimeToStation.js
-// - Sam's sam.js
-// - Sam's MARTA_times.js
-// - checkNeighborhood.js
-// - time_constaint.js
 
 const ATLCrimeData = {};
 let stations;
@@ -28,18 +17,13 @@ const arrayOfPromises = APIs.map(site => fetchData(site));
 
 // console.log(arrayOfPromises);
 
-
+// ===== PROMISE CHAIN =====
 Promise.all(arrayOfPromises)
   .then(arrayOfResults => {
     martaAPI = arrayOfResults[0];
     populationData = arrayOfResults[1];
     stations = Object.keys(populationData);
-
-
-    stations.forEach(station => {
-      populationData[station].Station_ID;
-    });
-
+    addToDropdown(populationData);
     rearrangeCrimeData();
     addCrimeToStations();
     topCrimeStations();
@@ -165,4 +149,79 @@ function appendToDivs(first, second, third) {
     p.textContent = `${one[0]}: ${one[1]}`;
     crimeDiv.appendChild(p);
   });
+}
+// ===== END =====
+
+// ===== Calculating crime rate of a specific station =====
+function calculateCrime(station) {
+  const rate = populationData[station]["Total Crimes"];
+  // console.log(rate);
+  if (rate < 1000) {
+    return "Low";
+  } else if (rate < 2500) {
+    return "Medium";
+  } else {
+    return "High";
+  }
+}
+
+// ===== Check for time constraints =====
+function checkForConstraints(totalTime=0) {
+  if (constraints && constraints < totalTime) {
+    return false;
+  }
+
+  return true;
+}
+
+// ===== Getting total time for destination =====
+function MartaTotalTime(currentLocation, destination) {
+    let totalTime = 0
+    let addTime  = 2
+    const paring = {
+        "N":"S",
+        "S":"N",
+        "W":"E",
+        "E":"W"
+    }
+    const currNumber = parseInt(currentLocation[currentLocation.length-1]);
+    const destinationNum = parseInt(destination[destination.length-1]);
+    if (currentLocation[0] === destination[0]) {
+        totalTime = Math.abs((currNumber - destinationNum)) * addTime
+    }else if (paring[currentLocation[0]] !== destination[0] && destination !== "5P") {
+        totalTime += currNumber * addTime;
+        totalTime += 10;
+        totalTime += destinationNum * addTime;
+    }else {
+        totalTime += currNumber * addTime;
+        totalTime += destinationNum * addTime;
+    }
+
+    return totalTime
+
+}
+
+// ===== Checks if user will make train =====
+function canMakeTrain(station) {
+  let isNext, waitingTime;
+  const realisticTrains = martaAPI.filter(train => {
+    const limit = 60;
+    const seconds = parseInt(train.WAITING_SECONDS);
+    return seconds > limit;
+  });
+
+  if (martaAPI[station].WAITING_SECONDS < realisticTrains[station].WAITING_SECONDS) {
+    isNext = false;
+  } else {
+    isNext = true;
+  }
+
+  realisticTrains.forEach((train, i) => {
+    if (martaAPI[i][`${station.toUpperCase()} STATION`] === train.STATION) {
+      waitingTime = parseInt(train.WAITING_SECONDS);
+      break;
+    }
+  });
+
+  return [isNext, waitingTime];
 }
