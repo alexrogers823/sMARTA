@@ -1,199 +1,6 @@
-// Variable containing all of our neighborhood objects
-const json = {
-    "North Springs": {
-        "Alt_Names": [],
-        "Population": 102212,
-        "Linked": ["Sandy Springs"]
-    },
-    "Sandy Springs": {
-        "Alt_Names": [],
-        "Population": 102212,
-        "Linked": ["North Springs"]
-    },
-    "Dunwoody": {
-        "Alt_Names": [],
-        "Population": 48128,
-        "Linked": ["Medical Center"]
-    },
-    "Medical Center": {
-        "Alt_Names": [],
-        "Population": 48128,
-        "Linked": ["Dunwoody"]
-    },
-    "Buckhead": {
-        "Alt_Names": [],
-        "Population": 174136,
-        "Linked": null
-    },
-    "Doraville": {
-        "Alt_Names": [],
-        "Population": 10348,
-        "Linked": null
-    },
-    "Chamblee": {
-        "Alt_Names": [],
-        "Population": 27862,
-        "Linked": null
-    },
-    "Brookhaven": {
-        "Alt_Names": ["Brookhaven/Oglethorpe"],
-        "Population": 51567,
-        "Linked": null
-    },
-    "Lenox": {
-        "Alt_Names": [],
-        "Population": 174136,
-        "Linked": ["Buckhead"]
-    },
-    "Lindbergh Center": {
-        "Alt_Names": [],
-        "Population": 26818,
-        "Linked": null
-    },
-    "Arts Center": {
-        "Alt_Names": [],
-        "Population": 40909,
-        "Linked": ["Midtown", "North Avenue"]
-    },
-    "Midtown": {
-        "Alt_Names": [],
-        "Population": 40909,
-        "Linked": ["Arts Center", "North Avenue"]
-    },
-    "North Avenue": {
-        "Alt_Names": [],
-        "Population": 40909,
-        "Linked": ["Midtown", "Arts Center"]
-    },
-    "Civic Center": {
-        "Alt_Names": [],
-        "Population": 32105,
-        "Linked": ["Five Points", "Peachtree Center", "Dome"]
-    },
-    "Peachtree Center": {
-        "Alt_Names": [],
-        "Population": 32105,
-        "Linked": ["Five Points", "Civic Center", "Dome"]
-    },
-    "Five Points": {
-        "Alt_Names": [],
-        "Population": 32105,
-        "Linked": ["Civic Center", "Peachtree Center", "Dome"]
-    },
-    "Garnett": {
-        "Alt_Names": [],
-        "Population": 22069,
-        "Linked": ["Vine City", "Ashby"]
-    },
-    "West End": {
-        "Alt_Names": [],
-        "Population": 27988,
-        "Linked": ["Oakland City", "Lakewood/Ft. McPherson"]
-    },
-    "Oakland City": {
-        "Alt_Names": [],
-        "Population": 27988,
-        "Linked": ["West End", "Lakewood/Ft. McPherson"]
-    },
-    "Lakewood/Ft. McPherson": {
-        "Alt_Names": ["Lakewood", "Ft. McPherson"],
-        "Population": 27988,
-        "Linked": ["West End", "Oakland City"]
-    },
-    "East Point": {
-        "Alt_Names": [],
-        "Population": 35477,
-        "Linked": null
-    },
-    "College Park": {
-        "Alt_Names": [],
-        "Population": 14434,
-        "Linked": null
-    },
-    "Airport": {
-        "Alt_Names": [],
-        "Population": null,
-        "Linked": null
-    },
-    "Hamilton E. Holmes": {
-        "Alt_Names": ["Collier Park"],
-        "Population": 57795,
-        "Linked": null
-    },
-    "West Lake": {
-        "Alt_Names": [],
-        "Population": 1954,
-        "Linked": null
-    },
-    "Bankhead": {
-        "Alt_Names": [],
-        "Population": 79864,
-        "Linked": null
-    },
-    "Ashby": {
-        "Alt_Names": [],
-        "Population": 22069,
-        "Linked": ["Vine City", "Garnett"]
-    },
-    "Vine City": {
-        "Alt_Names": [],
-        "Population": 22069,
-        "Linked": ["Ashby", "Garnett"]
-    },
-    "Dome": {
-        "Alt_Names": [],
-        "Population": 32105,
-        "Linked": ["Five Points", "Peachtree Center", "Civic Center"]
-    },
-    "Georgia State": {
-        "Alt_Names": [],
-        "Population": 53000,
-        "Linked": null
-    },
-    "King Memorial": {
-        "Alt_Names": ["Sweet Auburn"],
-        "Population": 20771,
-        "Linked": null
-    },
-    "Inman Park": {
-        "Alt_Names": ["Reynoldstown"],
-        "Population": 18725,
-        "Linked": null
-    },
-    "Edgewood": {
-        "Alt_Names": [],
-        "Population": 30513,
-        "Linked": null
-    },
-    "East Lake": {
-        "Alt_Names": [],
-        "Population": 11788,
-        "Linked": null
-    },
-    "Decatur": {
-        "Alt_Names": [],
-        "Population": 21210,
-        "Linked": ["Kensington"]
-    },
-    "Avondale": {
-        "Alt_Names": ["Avondale Estates"],
-        "Population": 2832,
-        "Linked": null
-    },
-    "Kensington": {
-        "Alt_Names": [],
-        "Population": 21210,
-        "Linked": ["Decatur"]
-    },
-    "Indian Creek": {
-        "Alt_Names": [],
-        "Population": 54680,
-        "Linked": null
-    }
-}
 
 // Variable referencing the 'submit' button to add an event listener
-const triggerElement = document.querySelector('[data-trigger]'); 
+const triggerElement = document.querySelector('[data-trigger]');
 
 
 // Variable referencing our formDiv by its data attribute
@@ -211,35 +18,32 @@ const currentTime = document.querySelector('[data-current-time]');
 
 // Function that automatically draws the current time
 function getCurrentTime() {
-    
+
     const now = new Date().toLocaleTimeString('en-US');
     // const minutes = now.getMinutes();
     // const hours = now.getHours();
     currentTime.textContent += `${now}`;
 }
-getCurrentTime();
+// getCurrentTime();
 
-// setInterval({
-    //     document.querySelector('[data-current-time]').innerHTML = '';
-    //     getCurrentTime;}, 1000
-    // );
-    
-    // Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
-    function addToDropdown(json) {
-        // console.log(json);
-        // const jsonArray = [...json];
-        
-        console.log(Object.keys(json).sort());
-        
-        
-    Object.keys(json).sort().forEach(key => {
-        selectFrom.appendChild(createStation(key));
-        selectTo.appendChild(createStation(key));
-    })
-    console.log(selectFrom);
-    
+setInterval(() => {
+  currentTime.textContent = "Current Time: ";
+  getCurrentTime();
+}, 1000);
+
+
+// Writing function to append relevant, up-to-date train info into our <select> element, rather than keep a static list
+function addToDropdown(data) {
+  // console.log(Object.keys(data).sort());
+  Object.keys(data).sort().forEach(key => {
+    selectFrom.appendChild(createStation(key));
+    selectTo.appendChild(createStation(key));
+  });
+  // console.log(selectFrom);
+
 }
-addToDropdown(json);
+
+// addToDropdown(populationData);
 
 
 
@@ -253,101 +57,104 @@ function createStation(key) {
 }
 
 // Writing a function that will append output data into our new section
-function appendOutputData() {
+function appendOutputData(start, destination, constraints) {
     // creating a paragraph, into which our output data will be placed (<p> will be inside the <form>)
     let outputParagraph = document.createElement("p");
-    
+
     // adding an event listener to detect when the submit button is clicked
     // when the button is clicked, the current contents of the input form will be overwritten with the output information we are providing the user
-    
+
     // getRadioButtonValue();
     formElement.innerHTML = '';
-    makeOutput();
-    
-    
-    
+    makeOutput(start, destination, constraints);
+
+
+
 }
 
 
 // 3 variables needed to pass into our makeOutput function
-triggerElement.addEventListener("click", appendOutputData);
-const selectFromText = selectFrom.options[selectFrom.selectedIndex].text;
-const selectToText = selectTo.options[selectTo.selectedIndex].text;
+triggerElement.addEventListener("click", () => {
+  const destination = (selectToText === "Please choose a station:") ? null : selectToText;
+  appendOutputData(selectFromText, destination, constraints);
+});
 
+console.log(selectFrom);
+selectFrom.addEventListener("change", () => {
+  selectFromText = selectFrom.options[selectFrom.selectedIndex].text;
+});
+
+selectTo.addEventListener("change", () => {
+  selectToText = selectTo.options[selectTo.selectedIndex].text;
+});
+
+let selectFromText = selectFrom.options[selectFrom.selectedIndex].text;
+let selectToText = selectTo.options[selectTo.selectedIndex].text;
 
 let constraints;
-    for(x=0; x<radioButtons.length; x++) {
-        if(radioButtons[x].checked) {
-            constraints = radioButtons[x].value;
-            // if(radioButtons[x].value === "no rush") {
-            //     console.log('no rush');
-            // } else if(radioButtons[x].value === "less than 15 minutes") {
-            //     console.log('less than 15 minutes');
-            // } else if(radioButtons[x].value === "15-20 minutes") {
-            //     console.log('15-20 minutes');
-            // } else if(radioButtons[x].value === "20-30 minutes") {
-            //     console.log('20-30 minutes');
-            // } else if(radioButtons[x].value === "30-40 minutes") {
-            //     console.log('30-40 minutes');
-            // } else if(radioButtons[x].value === "40-50 minutes") {
-            //     console.log('40-50 minutes');
-            // } else if (radioButtons[x].value === "50-60 minutes") {
-            //     console.log('50-60 minutes');
-            // } else {
-            //     console.log('yer good');
-            // }
-        }
+let radioButtons = document.getElementsByName("timeConstraints");
+// console.log(radioButtons);
+
+radioButtons.forEach(button => {
+    button.addEventListener("click", getButtonValue);
+});
+
+function getButtonValue() {
+  for(x=0; x<radioButtons.length; x++) {
+    if(radioButtons[x].checked) {
+      constraints = extractLowestConstraint(radioButtons[x].value);
     }
+  }
+}
+
+// Helper function for setting constraint in getButtonValue
+function extractLowestConstraint(value) {
+  if (value === "no rush") {
+    return null;
+  }
+
+  if (value === "less than 15 minutes") {
+    return 15;
+  }
+
+  return parseInt(value.slice(0, 2));
+}
 
 
 
-function makeOutput(selectFromText, selectToText, constraints) {
+function makeOutput(selectFromText, selectToText, constraints=null) {
     const crimeRate = document.createElement("p");
     const travelTime = document.createElement("p");
     const timeConstraints = document.createElement("p");
     const chanceOfGettingTrain = document.createElement("p");
 
-    let radioButtons = document.getElementsByName("timeConstraints");
-    console.log(radioButtons);
-    
-    // return constraints;
+    const start_id = populationData[selectFromText].Station_ID;
+    const destination_id = (selectToText !== "Please choose a station:") ? populationData[selectToText].Station_ID : null;
+    const totalTime = (selectToText !== "Please choose a station:") ? MartaTotalTime(start_id, destination_id) : 100;
+
+    // console.log(totalTime);
+
+    const crimeMessage = (selectToText) ? calculateCrime(selectToText) : calculateCrime(selectFromText);
+    const travelMessage = (selectToText) ? `approximately ${totalTime}` : 'up to 60';
+    const constraintMessage = (checkForConstraints(totalTime)) ? 'will' : 'will not';
 
 
 
     const paragraphObject = [
         {paragraph: crimeRate,
-        text: 'The crime rate in your area is X'},
+        text: `The crime rate in your area is ${crimeMessage}`},
         {paragraph: travelTime,
-        text: 'Your trip will take approximately X minutes'},
+        text: `Your trip will take ${travelMessage} minutes`},
         {paragraph: timeConstraints,
-        text: 'You will/will not be able to reach your destination in time'}, 
+        text: `You ${constraintMessage} be able to reach your destination in time`},
+        // text: checkForConstraints()},
         {paragraph: chanceOfGettingTrain,
-        text: 'You may have to wait at least 1 train before you can board.'}
+        text: `You may have to wait at least 1 train before you can board.`}
     ];
 
     for (let i=0; i<paragraphObject.length; i++) {
-        // no 'constraints' variable exists yet
-
-        // if(i=2 && constraints===false) {
-        //     continue;
-        // } 
         paragraphObject[i].paragraph.textContent = paragraphObject[i].text;
-        
         formElement.appendChild(paragraphObject[i].paragraph);
     };
 
-};        
-
-
-// function setText(paragraph) {
-    
-// }
-
-
-// Function that will calculate how much time the next train will take to arrive, relative to the exact current time when the submit button is pressed
-function timeToNextTrain(){
-    // creating a variable 
-    const now = getCurrentTime();
-    const timeToTrain = (now.getMinutes() - martaAPI[0].NEXT_ARR);
-    formElement.appendChild(timeToTrain);
-}
+};

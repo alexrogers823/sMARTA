@@ -14,20 +14,20 @@
         <h1>sMARTA</h1>
         <h3>MARTA smarter</h3>
     </header>
-    
+
     <p data-current-time>
         Current Time:
     </p>
-    
+
     <div class="formDiv" data-form>
     <div class="plan-a-trip-box">
             <div class="Top-3-crimeStations" data-Top3CrimeStations>
                     <h3>Top 3 Stations with Highest Crime Rate</h3>
                 </div>
             <h2 class="plan-a-trip-box_heading">Plan a Trip</h2>
-            
-                    
-        
+
+
+
 <!-- about to change timeInput -->
 
     <!-- Establishing our overarching div for the entire input form -->
@@ -37,6 +37,15 @@
         <!-- <h2 class ="Stations-With-Crime-Box">High Crime Rate Stations</h2> -->
     <!-- </div> -->
             <form action="#">
+              <div class="currentLocation">
+                <p>Which station are you leaving from?</p>
+                <select name="stationsFrom" class="stationsFrom" required data-stations-from>
+                  <option value="">
+                    Please choose a station:
+                  </option>
+                </select>
+              </div>
+              <br><br>
                     <div class="destination">
                             <p>Which station are you going to?</p>
                             <select name="stationsTo" data-stations-to>
@@ -46,15 +55,6 @@
                             </select>
                         </div>
                         <br><br>
-                <div class="currentLocation">
-                    <p>Which station are you leaving from?</p>
-                    <select name="stationsFrom" class="stationsFrom" required data-stations-from>
-                        <option value="">
-                            Please choose a station:
-                        </option>
-                    </select>
-                </div>
-                <br><br>
          <div class="timeInput" data-timeInput>
               <p>How much time do you have to get to your destination?</p>
               <input type="radio" name="timeConstraints" id="r1" value ="no rush">
@@ -72,7 +72,7 @@
               <input type="radio" name="timeConstraints" id="r7" value ="50-60 minutes">
               50-60 minutes <br>
             </div>
-    
+
         <br><br>
 
         <div class="submitButton" data-trigger>
@@ -96,7 +96,7 @@
 <script src="scripts/CrimeData-csv.js"></script>
 <script src="scripts/PapaParse.js"></script>
 <script src="scripts/index.js"></script>
-<script src="scripts/TotalTime.js"></script>
+<!-- <script src="scripts/TotalTime.js"></script> -->
 <!-- <script src="scripts/CrimeData.js"></script> -->
 <script src="scripts/sam.js"></script>
 </body>
