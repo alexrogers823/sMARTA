@@ -1,0 +1,237 @@
+{
+  "North Springs": {
+    "Station_ID": "N11",
+    "Alt_Names": [],
+    "Population": 102212,
+    "Linked": ["Sandy Springs"]
+  },
+  "Sandy Springs": {
+    "Station_ID": "N10",
+    "Alt_Names": [],
+    "Population": 102212,
+    "Linked": ["North Springs"]
+  },
+  "Dunwoody": {
+    "Station_ID": "N9",
+    "Alt_Names": [],
+    "Population": 48128,
+    "Linked": ["Medical Center"]
+  },
+  "Medical Center": {
+    "Station_ID": "N8",
+    "Alt_Names": [],
+    "Population": 48128,
+    "Linked": ["Dunwoody"]
+  },
+  "Buckhead": {
+    "Station_ID": "N7",
+    "Alt_Names": ["North Buckhead", "Peachtree Park", "Pine Hills", "Buckhead Forest",
+      "Buckhead Heights", "Buckhead Village", "Ridgedale Park", "South Tuxedo Park"],
+    "Population": 174136,
+    "Linked": null
+  },
+  "Doraville": {
+    "Station_ID": "NE10",
+    "Alt_Names": [],
+    "Population": 10348,
+    "Linked": null
+  },
+  "Chamblee": {
+    "Station_ID": "NE9",
+    "Alt_Names": [],
+    "Population": 27862,
+    "Linked": null
+  },
+  "Brookhaven": {
+    "Station_ID": "NE8",
+    "Alt_Names": ["Brookhaven"],
+    "Population": 51567,
+    "Linked": null
+  },
+  "Lenox": {
+    "Station_ID": "NE7",
+    "Alt_Names": ["Lenox", "Morningside/Lenox Park", "Peachtree Heights West"],
+    "Population": 174136,
+    "Linked": ["Buckhead"]
+  },
+  "Lindbergh Center": {
+    "Station_ID": "N6",
+    "Alt_Names": ["Lindbergh/Morosgo", "Peachtree Heights East", "Arden/Habersham"],
+    "Population": 26818,
+    "Linked": null
+  },
+  "Arts Center": {
+    "Station_ID": "N5",
+    "Alt_Names": ["Ansley Park", "Ardmore", "Atlantic Station", "Ridgewood Heights",
+      "Sherwood Forest", "Springlake"],
+    "Population": 40909,
+    "Linked": ["Midtown", "North Avenue"]
+  },
+  "Midtown": {
+    "Station_ID": "N4",
+    "Alt_Names": ["Midtown"],
+    "Population": 40909,
+    "Linked": ["Arts Center", "North Avenue"]
+  },
+  "North Avenue": {
+    "Station_ID": "N3",
+    "Alt_Names": ["Georgia Tech"],
+    "Population": 40909,
+    "Linked": ["Midtown", "Arts Center"]
+  },
+  "Civic Center": {
+    "Station_ID": "N2",
+    "Alt_Names": [],
+    "Population": 32105,
+    "Linked": ["Five Points", "Peachtree Center", "Dome"]
+  },
+  "Peachtree Center": {
+    "Station_ID": "N1",
+    "Alt_Names": [],
+    "Population": 32105,
+    "Linked": ["Five Points", "Civic Center", "Dome"]
+  },
+  "Five Points": {
+    "Station_ID": "5P",
+    "Alt_Names": ["Downtown"],
+    "Population": 32105,
+    "Linked": ["Civic Center", "Peachtree Center", "Dome"]
+  },
+  "Garnett": {
+    "Station_ID": "S1",
+    "Alt_Names": ["Summerhill"],
+    "Population": 22069,
+    "Linked": ["Vine City", "Ashby"]
+  },
+  "West End": {
+    "Station_ID": "S2",
+    "Alt_Names": ["Adair Park", "West End"],
+    "Population": 27988,
+    "Linked": ["Oakland City", "Lakewood/Ft. McPherson"]
+  },
+  "Oakland City": {
+    "Station_ID": "S3",
+    "Alt_Names": ["Oakland City", "Adams Park", "Amal Heights", "Capitol View",
+      "South Atlanta", "Sylvan Hills", "The Villages at Carver"],
+    "Population": 27988,
+    "Linked": ["West End", "Lakewood/Ft. McPherson"]
+  },
+  "Lakewood/Ft. McPherson": {
+    "Station_ID": "S4",
+    "Alt_Names": ["Lakewood", "Fort McPherson", "Ashley Courts", "Swallow Circle/Baywood"],
+    "Population": 27988,
+    "Linked": ["West End", "Oakland City"]
+  },
+  "East Point": {
+    "Station_ID": "S5",
+    "Alt_Names": ["Rebel Valley Forest", "Rosedale Heights", "Rue Royal"],
+    "Population": 35477,
+    "Linked": null
+  },
+  "College Park": {
+    "Station_ID": "S6",
+    "Alt_Names": [],
+    "Population": 14434,
+    "Linked": null
+  },
+  "Airport": {
+    "Station_ID": "S7",
+    "Alt_Names": [],
+    "Population": null,
+    "Linked": null
+  },
+  "Hamilton E. Holmes": {
+    "Station_ID": "W5",
+    "Alt_Names": ["Collier Park", "English Park", "Fairburn Heights", "Fairburn Mays",
+       "Fairburn Road/Wisteria Lane", "Fairburn Tell", "Fairburn Acres", "Florida Heights",
+      "Adamsville", "Atlanta Industrial Park", "Audobon Forest", "Audobon Forest West",
+      "Baker Hills", "Bakers Ferry", "Regency Trace", "Ridgecrest Forest"],
+    "Population": 57795,
+    "Linked": null
+  },
+  "West Lake": {
+    "Station_ID": "W4",
+    "Alt_Names": ["West Lake"],
+    "Population": 1954,
+    "Linked": null
+  },
+  "Bankhead": {
+    "Station_ID": "WN4",
+    "Alt_Names": ["Bankhead Courts", "Bankhead/Bolton", "Bankhead", "Riverside", "Scotts Crossing"],
+    "Population": 79864,
+    "Linked": null
+  },
+  "Ashby": {
+    "Station_ID": "W3",
+    "Alt_Names": ["Ashview Heights", "Atlanta University Center"],
+    "Population": 22069,
+    "Linked": ["Vine City", "Garnett"]
+  },
+  "Vine City": {
+    "Station_ID": "W2",
+    "Alt_Names": ["English Avenue", "Vine City"],
+    "Population": 22069,
+    "Linked": ["Ashby", "Garnett"]
+  },
+  "Dome": {
+    "Station_ID": "W1",
+    "Alt_Names": [],
+    "Population": 32105,
+    "Linked": ["Five Points", "Peachtree Center", "Civic Center"]
+  },
+  "Georgia State": {
+    "Station_ID": "E1",
+    "Alt_Names": [],
+    "Population": 53000,
+    "Linked": null
+  },
+  "King Memorial": {
+    "Station_ID": "E2",
+    "Alt_Names": ["Sweet Auburn", "Old Fourth Ward"],
+    "Population": 20771,
+    "Linked": null
+  },
+  "Inman Park": {
+    "Station_ID": "E3",
+    "Alt_Names": ["Inman Park", "Reynoldstown", "Atkins Park", "East Atlanta",
+      "Virginia Highland"],
+    "Population": 18725,
+    "Linked": null
+  },
+  "Edgewood": {
+    "Station_ID": "E4",
+    "Alt_Names": ["Druid Hills"],
+    "Population": 30513,
+    "Linked": null
+  },
+  "East Lake": {
+    "Station_ID": "E5",
+    "Alt_Names": ["The Villages at East Lake"],
+    "Population": 11788,
+    "Linked": null
+  },
+  "Decatur": {
+    "Station_ID": "E6",
+    "Alt_Names": [],
+    "Population": 21210,
+    "Linked": ["Kensington"]
+  },
+  "Avondale": {
+    "Station_ID": "E7",
+    "Alt_Names": ["Avondale Estates"],
+    "Population": 2832,
+    "Linked": null
+  },
+  "Kensington": {
+    "Station_ID": "E8",
+    "Alt_Names": [],
+    "Population": 21210,
+    "Linked": ["Decatur"]
+  },
+  "Indian Creek": {
+    "Station_ID": "E9",
+    "Alt_Names": ["Rockdale"],
+    "Population": 54680,
+    "Linked": null
+  }
+}
